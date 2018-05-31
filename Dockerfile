@@ -9,7 +9,6 @@ RUN pip3 install uwsgi flask
 COPY init.d/uwsgi /etc/init.d/
 RUN chmod +x /etc/init.d/uwsgi
 
-COPY nginx/default /etc/nginx/sites-enabled/
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY vassals/myproject.ini /etc/uwsgi/vassals/
 
